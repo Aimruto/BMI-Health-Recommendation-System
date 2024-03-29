@@ -1,9 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    
   }
-  
+
   .grid-container {
     display: grid;
     grid-template-rows: 1fr,2fr,1fr; /* Auto-sized navbar and footer, main content takes remaining space */
@@ -12,38 +15,67 @@
   }
   .main-container{
     display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
     grid-template-rows: 1fr 1fr;
     grid-template-columns:1fr 1fr;
+    gap: 0.7rem;
   }
-  .navbar {
+  .login{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start:1 ;
+    grid-column-end: 3;
+  }
+  .contact{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start:1 ;
+    grid-column-end: 3;
+  }
+  .about{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start:1 ;
+    grid-column-end: 3; 
+  }
+  .grid-header {
     grid-column-start: 1;
-    grid-column-end:2 ;
-    background-color: #333;
+    grid-column-end:3 ;
+    
+
     color: #fff;
     padding: 10px;
   }
   
   .calculator {
-    
+    padding-left: 0.7rem;
+    grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  
+  }
+  .healthRecom{
+    grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-  
   }
   .todo{
     grid-column-start: 2;
-    grid-row-start: 1;
-    
-  }
-  .todo2{
-    grid-column-start: 2;
     grid-row-start: 2;
+    grid-row-end: 3;
   }
 
   .footer {
     grid-column-start: 1;
-    grid-column-end:2 ;
-    background-color: #333;
+    grid-column-end:3 ;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
     color: #fff;
-    padding: 10px;
+
   }
   

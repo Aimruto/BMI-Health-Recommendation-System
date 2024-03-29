@@ -1,40 +1,124 @@
-.calculator-container {
-    background: linear-gradient(135deg, #fffff0, #ffff); /* Yellow to white gradient */
-    padding: 20px;
-    height: 100%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .calculator-container h2 {
-    color: #333;
-  }
-  
-  .calculator-container input {
+.calMain {
+  color: #d7c9f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  height: 100vh;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.calContainer {
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgb(231, 243, 242);
+  background: #6140a0;
+  border: whitesmoke;
+  border-width: 2px;
+  height: 102vh;
+  width: 100%; /* Subtracting the padding from the width */ /* Optional: Limit the maximum width */
+
+  padding: 3rem 2rem 2rem 2rem ;
+  margin-top: 0 ; /* Center the container horizontally */
+}
+.calContainer hr{
+  border: none;
     width: 100%;
-    padding: 8px;
-    margin: 5px 0;
-  }
-  
-  .calculator-container button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .calculator-container button:hover {
-    background-color: #45a049;
-  }
-  
-  .calculator-container div {
-    margin-bottom: 10px;
-  }
-  
-  .calculator-container label {
-    font-weight: bold;
-  }
-  
+    height: 3px;
+    box-shadow: 0 0 10px rgba(40, 6, 53, 0.5);
+    background-color: #2A1B3D;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.calTitle {
+  color: #d7c9f0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 34px 0 0 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.labels1, .labels2, .labels3 {
+  font-size: 20px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+::placeholder{
+  color: #2A1B3D;
+  opacity: 1;
+}
+.bmiInputd{
+  width: 50%;
+  height: 30px;
+  margin-top: 12px;
+  border-radius: 5px;
+  border-color: #c1aee4;
+  color: #2A1B3D;
+  background-color: transparent;
+}
+
+.btnCal, .btnReload {
+  border-radius: 15px;
+  height: 32px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.04rem;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btnCal {
+  width: 100px;
+  height: 40px;
+  background: rgb(186, 105, 220);
+}
+
+.btnReload {
+  width: 100px;
+  height: 40px;
+  margin-left: 0;
+  background-color: rgb(199, 102, 100);
+}
+
+.btnCal:hover {
+  background-color: rgb(137, 45, 149);
+  transform: scale(1.05);
+}
+
+.btnReload:hover {
+  background-color: rgb(185, 85, 63);
+  transform: scale(1.05);
+}
+.butt{
+  display: flex;
+  padding: 1rem;
+  justify-content:left;
+  align-items: center;
+  gap: 1rem;
+
+
+}
+.result {
+  margin-top: 20px;
+}
+
+.calA, .calB {
+  margin-right: 60px;
+}
+
+.pMsg {
+  margin-top: 20px;
+  color: greenyellow;
+}
+.lower{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.lower img{
+  padding-top:3rem;
+}
