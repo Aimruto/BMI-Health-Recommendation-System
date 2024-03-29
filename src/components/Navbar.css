@@ -1,12 +1,13 @@
 .navbar {
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  background: linear-gradient(270deg, #583e79, #2A1B3D);
   color: white;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: larger;
 }
 
 .logo {
@@ -17,9 +18,16 @@
   display: flex;
   align-items: center;
 }
-
+.chop {
+  width: 60px; /* Set the width of the image */
+  height: auto; /* Maintain aspect ratio */
+  background-color: #3e2a58;
+  border-radius: 3px;
+  border-color: black;
+  border-width: 1px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
 .nav-list {
-  
   list-style: none;
   margin: 0;
   padding: 2px;
@@ -29,6 +37,9 @@
 
 .nav-list li {
   margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
 }
 
 .nav-list li:first-child {
@@ -36,66 +47,135 @@
 }
 
 .nav-list li a {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-decoration: none;
   color: white;
   border-radius: 10px;
   padding: 5px 10px;
+  justify-content: center;
+  
 }
 
 .nav-list li a:hover {
-  background-color: #ff7f0e;
+ 
   color: #fff;
+  background: linear-gradient(270deg, #ff994f, #fa6d86);
 }
 
 .toggle {
   display: none;
 }
+.nav-log {
+  background-color: #6420AA; /* Background color */
+  color: white; /* Text color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 8px 16px; /* Padding */
+  text-decoration: none; /* Remove default underline */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
+}
 
+.nav-log:hover {
+  background-color: #985dd3; /* Background color on hover */
+}
 @media (max-width: 768px) {
   .toggle {
-      display: block;
-      cursor: pointer;
+    display: block;
+    cursor: pointer;
   }
 
   .nav-list {
-      display: none;
-      position: absolute;
-      top: calc(100% + 10px);
-      right: 0;
-      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-      text-align: center;
-      border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    text-align: center;
+    border-radius: 10px;
   }
 
   ul.active {
-      display: flex;
-      z-index: 2;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 0;
-      width: 100%;
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    width: 100%;
+    backdrop-filter: blur(10px); /* Apply backdrop filter for blur effect */
+    background-color: rgba(240, 248, 255, 0.263); /* Adjust background color with transparency */
   }
 
   .nav-list li {
-      margin: 0;
+    margin: 0;
   }
 
   .nav-list li a {
-      text-decoration: none;
-      color: white;
-      border-radius: 10px;
-      padding: 8px 16px;
+    text-decoration: none;
+    color: purple;
+    border-radius: 10px;
+    padding: 8px 16px;
   }
 
   .nav-list li a:hover {
-      text-decoration: none;
-      
-      background-color: #ff7f0e;
-      color: #fff;
+    background-color: #ff7f0e;
+    color: #fff;
   }
 
   .nav-list li:last-child {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .nav-log {
+    padding: 6px 12px; /* Adjust padding for smaller screens */
+  }
+}
+@media (max-width: 680px) {
+  .toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .nav-list.active {
+    color:#6420AA;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 2; /* Move the menu above other content */
+    backdrop-filter: blur(10px); /* Apply backdrop filter for blur effect */
+    background-color: rgba(240, 248, 255, 0.263); /* Adjust background color with transparency */
+  }
+
+  .nav-list li {
+    margin: 0;
+  }
+
+  .nav-list li a {
+    text-decoration: none;
+    color: #6420AA;
+    border-radius: 10px;
+    padding: 8px 16px;
+  }
+
+  .nav-list li a:hover {
+    background-color: #ff7f0e;
+    color: #fff;
+  }
+
+  .nav-list li:last-child {
+    margin-bottom: 20px;
+  }
+  .nav-log {
+    padding: 1px 8px; /* Further adjust padding for even smaller screens */
+    justify-content: center;
+    font-size: 14px; /* Decrease font size for smaller screens */
   }
 }
