@@ -17,10 +17,9 @@
   border: whitesmoke;
   border-width: 2px;
   height: 102vh;
-  width: 100%; /* Subtracting the padding from the width */ /* Optional: Limit the maximum width */
-
+  width: 100%; 
   padding: 3rem 2rem 2rem 2rem ;
-  margin-top: 0 ; /* Center the container horizontally */
+  margin-top: 0 ;
 }
 .calContainer hr{
   border: none;
