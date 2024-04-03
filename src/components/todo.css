@@ -26,8 +26,8 @@
   transition: box-shadow 0.3s ease-in-out;
   box-shadow: 0 0 30px rgb(26, 8, 59);
   animation: glow 2s infinite alternate;
-  overflow-y: hidden; /* Add scrollbar for vertical overflow */
-  max-height: 100%; /* Set maximum height to trigger scrollbar */
+  overflow-y: hidden; 
+  max-height: 100%;
 }
 
 .container:hover {
@@ -93,8 +93,8 @@ input {
   padding: 0;
   display: flex; 
   flex-direction: column; 
-  overflow-y:scroll; /* Add scrollbar for vertical overflow */
-  max-height: 12rem; /* Set maximum height to trigger scrollbar */
+  overflow-y:scroll; 
+  max-height: 12rem; 
 }
 
 li.todo-item {
@@ -149,7 +149,7 @@ span {
   }
   
   .add {
-    /* Adjust button styles here */
+    
   }
   
   li.todo-item {
@@ -171,9 +171,6 @@ span {
     flex-direction: column;
   }
   
-  .add {
-    /* Adjust button styles here */
-  }
   
   li.todo-item {
     margin-left: 0;
