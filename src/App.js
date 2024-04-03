@@ -18,9 +18,8 @@ function App() {
   };
 
   const handleLogin = () => {
-    // Your login logic goes here
-    // For now, let's assume login is successful
-    setIsLoginClicked(false); // Hide the login component after successful login
+   
+    setIsLoginClicked(false); 
   };
 
   return (
