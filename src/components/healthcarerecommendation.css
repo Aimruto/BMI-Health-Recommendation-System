@@ -8,9 +8,8 @@
   
   margin-top: 1rem;
   background: #44318D;
-  width: 98.5%; /* Spread across the entire grid block */
+  width: 98.5%;
   height: 50vh;
-   /* Added padding for better appearance */
 }
 .health-head{
   padding-bottom: 3rem;
