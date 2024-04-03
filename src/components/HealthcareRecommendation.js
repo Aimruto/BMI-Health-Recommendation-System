@@ -2,7 +2,6 @@ import React from 'react';
 import "./healthcarerecommendation.css";
 const HealthcareRecommendation = () => {
   const handleClick = () => {
-    // Open the Streamlit page in a new tab/window
     window.open('http://localhost:8501/', '_blank');
   };
 
