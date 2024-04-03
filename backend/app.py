@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 
-# Database initialization
+
 def initialize_database():
     conn = sqlite3.connect('users.db')
     conn.execute('''CREATE TABLE IF NOT EXISTS users
@@ -17,15 +17,13 @@ def initialize_database():
     conn.commit()
     conn.close()
 
-# Email validation function
 def is_valid_email(email):
     return re.match(r'^[\w\.-]+@[\w\.-]+(\.[\w]+)+$', email)
 
-# Password validation function
+
 def is_valid_password(password):
     return len(password) >= 6
 
-# User sign up endpoint
 @app.route('/api/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
@@ -58,10 +56,8 @@ def signup():
             conn.close()
             return jsonify({'error': 'Email or username already exists'}), 400
     else:
-        # Handle GET request (if needed)
         return jsonify({'message': 'GET request received for signup'}), 200
 
-# User login endpoint
 @app.route('/api/login', methods=['POST'])
 def login():
     data = request.json
