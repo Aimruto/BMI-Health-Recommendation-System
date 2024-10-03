@@ -25,8 +25,8 @@ const Todo = () => {
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter') { // Check if the pressed key is "Enter"
-      handleAddTask(); // Call the function to add a task
+    if (e.key === "Enter") {
+      handleAddTask();
     }
   };
 
@@ -35,33 +35,35 @@ const Todo = () => {
       <div className="container">
         <h2>To-Do List</h2>
         <div className="row">
+          <label htmlFor="task-input" className="sr-only">Task</label>
           <input
+            id="task-input"
             type="text"
             value={newTask}
             onChange={(e) => setNewTask(e.target.value)}
-            onKeyPress={handleKeyPress} // Call handleKeyPress function on key press
+            onKeyPress={handleKeyPress}
             placeholder="Enter your task"
           />
           <button className="add" onClick={handleAddTask}>
             Add
           </button>
         </div>
-        <ul id="list-container">
+        <ul className="list-container" id="list-container">
           {tasks.map((task) => (
             <li key={task.id} className="todo-item">
-
               <input
                 type="checkbox"
                 checked={task.completed}
                 onChange={() => handleToggleCompletion(task.id)}
               />
-              <div
+              <span
                 style={{
                   textDecoration: task.completed ? "line-through" : "none",
+                  color: task.completed ? "#b0b0b0" : "#4e085f", // Change text color for completed tasks
                 }}
               >
                 {task.text}
-              </div>
+              </span>
               <button className="del" onClick={() => handleDeleteTask(task.id)}>
                 ❌
               </button>

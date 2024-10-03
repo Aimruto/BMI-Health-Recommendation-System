@@ -1,22 +1,32 @@
 .recommendation-container {
-
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
   color: #fff;
   border-radius: 10px;
-  padding-top: 4rem;
-  
+  padding-top: 2rem;
   margin-top: 1rem;
   background: #44318D;
   width: 98.5%;
   height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
-.health-head{
+
+.health-head {
   padding-bottom: 3rem;
 }
+
 .recommendation-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 20px;
   font-size: 16px;
+  position: relative;
   background: linear-gradient(270deg, #ff994f, #fa6d86);
   color: white;
   border: none;
@@ -26,7 +36,6 @@
 }
 
 .recommendation-button:hover {
-  transform:scale(1.05);
-
+  transform: scale(1.05);
   background: linear-gradient(270deg, #ff994f, #fa6d86);
 }
